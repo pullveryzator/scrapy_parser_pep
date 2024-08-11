@@ -7,8 +7,7 @@ max-complexity = 10
 max-line-length = 79
 exclude =
     tests/
-  ./scrapy_parser_pep/pep_parse/settings.py
-  ./scrapy_parser_pep/pep_parse/middlewares.py
+    venv/
+    settings.py
+    middlewares.py
   __init__.py
-  per-file-ignores =
-    */settings.py:E501, E265
