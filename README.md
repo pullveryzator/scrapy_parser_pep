@@ -32,22 +32,24 @@ markdown
 1. Клонируйте репозиторий:
 
    
-bash
 git clone git@github.com:pullveryzator/scrapy_parser_pep.git
+
+
+2. Перейдите в папку с проектом:
+
+
 cd scrapy_parser_pep
 
 
-2. Установите необходимые зависимости (например, через `pip`):
+3. Установите необходимые зависимости (например, через `pip`):
 
    
-bash
 pip install -r requirements.txt
 
 
-3. Запустите парсер:
+4. Запустите парсер:
 
    
-bash
 scrapy crawl pep
 
 
