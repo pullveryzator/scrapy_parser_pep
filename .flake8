@@ -10,3 +10,5 @@ exclude =
   ./scrapy_parser_pep/pep_parse/settings.py
   ./scrapy_parser_pep/pep_parse/middlewares.py
   __init__.py
+  per-file-ignores =
+    */settings.py:E501, E265
