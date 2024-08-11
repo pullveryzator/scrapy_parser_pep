@@ -1,8 +1,8 @@
 from pathlib import Path
 
-BASE_DIR = Path(__file__).parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 DATETIME_FOR_FILE_FORMAT = '%Y-%m-%dT%H-%M-%S'
-EXPECTED_STATUS = [
+EXPECTED_STATUS = (
     'Active',
     'Accepted',
     'Deferred',
@@ -12,4 +12,4 @@ EXPECTED_STATUS = [
     'Superseded',
     'Withdrawn',
     'Draft'
-    ]
+)
