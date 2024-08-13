@@ -12,9 +12,9 @@ class PepSpider(scrapy.Spider):
 
     def parse(self, response):
         all_peps = response.css('a[href^="pep-"]').xpath('@href').getall()
-        filtered_peps = [
+        filtered_peps_links = [
             href for href in all_peps if re.match(r'^pep-\d{4}/$', href)]
-        for pep_link in filtered_peps:
+        for pep_link in filtered_peps_links:
             yield response.follow(pep_link, callback=self.parse_pep)
 
     def parse_pep(self, response):
@@ -25,6 +25,7 @@ class PepSpider(scrapy.Spider):
         data = {
             'number': pep_number_name[0],
             'name': pep_number_name[1],
-            'status': response.css('abbr::text').get()
+            'status': response.css(
+                'dt:contains("Status") + dd abbr::text').get()
         }
         yield PepParseItem(data)
