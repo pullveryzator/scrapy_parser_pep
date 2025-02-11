@@ -1,4 +1,3 @@
-markdown
 # PEP Document Parser
 
 Этот проект представляет собой парсер документов PEP (Python Enhancement Proposals), который собирает и анализирует информацию о PEP и выводит результаты в формате CSV.
